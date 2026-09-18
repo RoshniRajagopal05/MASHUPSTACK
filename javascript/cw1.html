@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let tshirtQuantity = 5;
+        let tshirtPrice = 400;
+        console.log("Initial tshirtPrice:",tshirtPrice)
+        let capQuantity = 3;
+        let capPrice = 150;
+        console.log("capPrice", capPrice)
+       
+        let tshirtEarnings = tshirtQuantity * tshirtPrice
+        console.log("tshirtEarnings:", tshirtEarnings);
+        let capEarnings = capQuantity * capPrice
+        console.log("capEarnings : ", capEarnings);
+        let totalEarnings = tshirtEarnings + capEarnings
+
+        console.log("totalEarnings :", totalEarnings);
+
+         tshirtPrice = 450
+         console.log("tshirt price changed:" ,tshirtPrice)
+         console.log("RECALCULATION  WITH UPDATED TSHIRT PRICE")
+         tshirtEarnings = tshirtQuantity * tshirtPrice
+         totalEarnings = tshirtEarnings + capEarnings
+
+         console.log("Updated total earnings :", totalEarnings )
+ 
+    </script>
+</body>
+</html>

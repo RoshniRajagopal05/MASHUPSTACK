@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let mysteryLevel = Math.floor(Math.random() * 50) + 1
+        console.log("Representing mystery level from 1 to 50 : ", mysteryLevel)
+        let userScore = "45"
+        console.log(" Before converting the userScore ",userScore," the datatype is " + typeof (userScore) );
+          userScore = Number(userScore);
+          console.log("After converting the userscore ", userScore, " the datatype is " + typeof(userScore));
+        let difference = mysteryLevel - userScore
+           difference = Math.abs(difference);
+        console.log( " Difference between the mystery level and the user's score ", difference )
+
+        let squareRootOfUserScore = Math.sqrt(userScore);
+        console.log("Square root of userscore : ", squareRootOfUserScore)
+        let PIvalue = Math.PI
+        console.log("PI Value using Math property " , PIvalue)
+
+        console.log("Multiplying the string using implicit conversion")
+        let anumber = "20" * 5
+        console.log( `"20" * 5 = ${anumber}`);
+
+        let highestValue = Math.max(10, 20, mysteryLevel)
+        console.log("The highest value among the numbers is,", highestValue)
+
+        let lowestValue = Math.min(10,20,mysteryLevel)
+        console.log("The highest value among the numbers is,", lowestValue)
+
+    </script>
+</body>
+</html>

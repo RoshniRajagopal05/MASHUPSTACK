@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    let   userProfile = {
+        username : "CoolUser99",
+        bio : " I LOVE coding! JavaScript is Great!!! ",
+        
+    }
+    console.log("Initial object disaplay : ")
+    console.log(userProfile);
+
+    function  cleanUserBio(profile){
+        let cleanedUsername =  profile.username.trim().toLowerCase();
+        console.log("Cleaned username : " ,cleanedUsername);
+        let cleanedBio = profile.bio.trim().toLowerCase();
+        console.log("Cleaned Bio :" ,cleanedBio);
+        cleanedBio = cleanedBio.replaceAll("javascript", "JS");
+        console.log("After replacing javascript with js, ",cleanedBio);
+        let biolength = cleanedBio.length;
+        console.log(biolength);
+        
+        return {
+            username : cleanedUsername,
+            bio : cleanedBio,
+            biolength : biolength 
+        };
+
+    }
+     let result = cleanUserBio(userProfile);
+     console.log(result);
+
+
+
+       
+
+
+
+
+   
+    </script>
+</body>
+</html>

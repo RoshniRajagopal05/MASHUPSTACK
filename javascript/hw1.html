@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let riceName = "Rice";
+        let sugarName = "Sugar";
+        let wheatName = "Wheat";
+
+        let ricePrice = 60, riceQuantity = 5;
+        console.log("RisePrice :",ricePrice +   "       RiseQuantity : ",riceQuantity)
+        let sugarPrice = 50, sugarQuantity = 2;
+        console.log("SugarPrice : ", sugarPrice +  "     SugarQuantity : ", sugarQuantity)
+        let wheatPrice = 45, wheatQuantity = 3;
+        console.log("WheatPrice : ", wheatPrice + "     WheatQuantity : ", wheatQuantity)
+
+    
+    
+        let riceCost = riceQuantity * ricePrice
+        console.log("TOTAL COST :" , riceName  , riceCost)
+        let sugarCost = sugarQuantity * sugarPrice
+        console.log("TOTAL COST : ",sugarName, sugarCost)
+        let wheatCost = wheatQuantity * wheatPrice
+        console.log("TOTAL COST : ", wheatName, wheatCost)
+
+        let  totalBill = riceCost + sugarCost + wheatCost;
+        console.log("TOTALBILL ", totalBill)
+
+        riceQuantity = 7
+        console.log("RICE QUANTITY CHANGED : " ,riceQuantity)
+        console.log("RECALCULATION OF TOTALBILL")
+        riceCost = riceQuantity * ricePrice
+        console.log("TOTAL COST :" , riceName  , riceCost)
+        totalBill = riceCost + sugarCost + wheatCost;
+
+        console.log("RECALCULATED TOTAL BILL : ",totalBill )
+    </script>
+</body>
+</html>

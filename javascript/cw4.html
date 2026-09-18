@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let randomNumber = Math.floor(Math.random() * 100) + 1
+        console.log("Random number generated between 1 and 100 is : ", randomNumber);
+        let userScore = "75"
+        console.log("User simulated score : " , userScore)
+        console.log(typeof(userScore))
+        let userScoreTonumberConversion = Number(userScore);
+        console.log("After type conversion, ", userScoreTonumberConversion);
+        console.log(typeof("After conversion ",userScoreTonumberConversion))
+        let difference = ( randomNumber - userScore )
+        console.log("Difference between the random number", randomNumber + " and the user score is ---", userScoreTonumberConversion )
+        let roundedSquareRoot = Math.round(Math.sqrt(userScore));
+        console.log("Rounded square root of the userscore : ", roundedSquareRoot)
+        let piValueInJavascript = Math.PI
+        console.log(" PI Value in Javascript  is ", piValueInJavascript);
+        let x = "50" * 2
+        console.log("After Converting the string  to a number using implicit conversion", x );
+
+    </script>
+    
+</body>
+</html>

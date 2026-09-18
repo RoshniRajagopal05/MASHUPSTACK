@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var feedback = "   I loved the FOOD and the service!   ";
+        console.log(feedback)
+        feedback = feedback.trim()
+        console.log("After trimming, "), console.log( feedback);
+        let tolowercase = feedback.toLowerCase()
+        console.log("AFTER CONVERTING TO LOWERCASE,", tolowercase)
+        let replacedWord = feedback.replace("FOOD", "ambience");
+        console.log("Replaced Word,", replacedWord)
+        let positionOfWordService = feedback.indexOf("service");
+        console.log("Position of the word Service : ", positionOfWordService)
+        let arrayOfWords = feedback.split(" ");
+        console.log( "After convert the string to an array of words", arrayOfWords)
+    </script>
+</body>
+</html>
