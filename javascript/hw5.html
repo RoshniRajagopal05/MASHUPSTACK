@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Checks whether the user is old enough to access admin features 
+        (age should be 18 or more and user must be admin).</h3>
+        <p id="p1"></p>
+    <button id="user1">Check this button</button>
+    <script>
+        let user = {
+            name : "Roshni Rajagopal",
+            age : 23,
+            isAdmin : true
+        }
+        let button = document.getElementById("user1").addEventListener("click", function(){
+
+        let checkIsAdmin = user.age >= 18  &&  user.isAdmin === true
+        ? "Access Granted"
+        : "Access Denied"
+        console.log("The user object created is ",user);
+        console.log(checkIsAdmin);
+        document.getElementById("p1").innerHTML = checkIsAdmin
+    
+     }
+   )
+
+
+
+
+    </script>
+</body>
+</html>

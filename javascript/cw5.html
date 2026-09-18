@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>This button click should create an order with the following details: itemName, isDelivered, and daysSinceDelivery.</h3>
+    <h4 id="msg"></h4>
+    <h3 id="msg1"></h3>
+    <button  id="returnButton"> Check Return</button>
+    <script>
+       let order = {
+        itemName : "Laptop",
+        isDelivered : true,
+        daysSinceDelivery : 5
+
+        }
+
+        let button = document.getElementById("returnButton").addEventListener ("click", function(){
+
+            let message = order.isDelivered === true && order.daysSinceDelivery <= 7
+            ? "Eligible for Return"
+            : "Return Period Expired"
+            let store = document.getElementById("msg")
+            document.getElementById("msg1").innerHTML = `The below order is checked on the basis of the following details, the item has been delivered (isDelivered is true)and the item was delivered within the last 7 days. If both are true, display “Eligible for Return”, otherwise display “Return Period Expired”  is displayed. `
+            
+            console.log(message);
+
+            store.innerHTML = message
+            console.log(order);
+            console.log(`Is itemName property exists in the object order:  ${"itemName" in order}`);
+            delete order.daysSinceDelivery
+            console.log(order);
+        
+            
+        }
+    )
+    </script>
+    
+</body>
+</html>

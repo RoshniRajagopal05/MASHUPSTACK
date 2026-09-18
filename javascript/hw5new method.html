@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Checks whether the user is old enough to access admin features </h2>
+    <h3>age should be 18 or more and user must be admin</h3>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <button onclick="adminChecker(user)"> Click on this Button</button>
+    <script>
+
+        let user = {
+            name : "Roshni Rajagopal",
+            age : 23,
+            isAdmin : true
+
+        }
+
+        console.log("Checks whether the user is old enough to access admin features ");
+        console.log("age should be 18 or more and user must be admin")
+
+        function adminChecker(profile){
+           
+            let result = profile.age >= 18  &&  profile.isAdmin === true
+            ? "Access Granted"
+            : "Access Denied."
+            console.log(result);
+            document.getElementById("p1").innerHTML = result
+
+             let ageExist = "age" in user;
+        console.log(`The age property exist in the object user : ${ageExist}`);
+        document.getElementById("p2").innerHTML = ageExist
+
+        delete user.age 
+        console.log(user);
+        }
+
+       
+        
+
+    
+    </script>
+</body>
+</html>
