@@ -11,7 +11,9 @@
             { name : "Roshni", score : 50 },
             { name : "Alin", score : 80},
             { name : "Aparna", score : 90},
-            { name : "Midhula", score : 100}
+            { name : "Midhula", score : 100},
+            { name : "Saveri", score : 30 },
+            { name : "Sethu", score : 20 },
         ]
 
         //List all student names.
@@ -41,7 +43,43 @@
 
           // Check if all students passed (score > 35)
 
-          let allPassed = students.every()
+          let allPassed = students.every(function(student) {
+            return student.score > 35;
+          });
+
+          console.log ("Students who scored above 35 -- ", allPassed);
+           
+
+          let passedStudents = students.filter(function(student){
+            return student.score > 35;
+          });
+
+          console.log("Students who scored above 35 : ");
+
+          for(i = 0; i < passedStudents.length; i++){
+            console.log(passedStudents[i].name + " - " + passedStudents[i].score);
+          }
+
+          //Check if at least one student scored more than 90.
+
+          hasAbove90 = students.some(function(student){
+            return student.score > 90;
+
+          });
+
+          console.log("Students scored above 90 :", hasAbove90)
+          
+
+        students.sort (function(a,b) {
+           return b.score - a.score;
+          })
+
+          console.log("Students soted by score : ");
+
+          for (i = 0; i < students.length; i++){
+            console.log(students[i].name, students[i].score);
+          }
+
     </script>
 </body>
 </html>
