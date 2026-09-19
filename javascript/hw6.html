@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let students = [
+            { name : "Roshni", score : 50 },
+            { name : "Alin", score : 80},
+            { name : "Aparna", score : 90},
+            { name : "Midhula", score : 100}
+        ]
+
+        //List all student names.
+        console.log(" This is the listing of all student names ")
+        for (i = 0; i < students.length; i++){
+            console.log(students[i].name);
+        }
+
+        //Create a new array that shows only the names of students who scored more than 60.
+        let passedAbove60 = [];
+        for (i = 0; i < students.length; i++){
+            if(students[i].score > 60){
+                passedAbove60.push(students[i].name, students[i].score)
+                console.log("The students who scored above 60 --", passedAbove60)
+            }
+        }
+        
+
+        //Find the total score of all students
+          let totalScore = 0;
+
+          for (i = 0; i < students.length; i++){
+            totalScore = totalScore + students[i].score;
+            console.log("Total score of all the studentes is : ", totalScore);
+          }
+        
+
+          // Check if all students passed (score > 35)
+
+          let allPassed = students.every()
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+
+      let products = ["Apple","Banana","Avocado" ,"Orange", "Grapes"]
+      console.log("The array of fruits,",products);
+      let prices = [50, 60,100, 70, 45]
+      console.log("The prices of the fruits, " ,prices);
+
+     // The question wants this format: "Product: Apple - Price: 50"
+    //  Merge them into one array
+
+      let productList = []
+      for (let i = 0; i < products.length; i++){
+        let entry = " Product : " + products[i] + "   -  Price: " + prices[i];
+        productList.push(entry);
+      }
+
+    // Display all products using a loop
+   console.log("The entire fuitlist was to be pinted in this particular format ---")
+    for (let i = 0; i < productList.length; i++){
+        console.log( productList[i]);
+    }
+    
+    // Filter products whose price is greater than 50
+
+    let expensiveProducts = [];
+    for(i = 0; i < prices.length; i++){
+        if(prices[i] > 50){
+            expensiveProducts.push(productList[i]);
+            console.log("Fruits with price greater than 50 is ", expensiveProducts);
+        }
+    }
+
+    // Add a new product "Watermelon" with price 80.
+
+     products.push("Watermelon");
+     console.log("Added a new fruit to the existing array ")
+     console.log(products);
+     prices.push(90);
+     let newProduct = "Product: " + products[4] + " - Price : " + prices[4];
+     productList.push(newProduct);
+
+
+     // To Display the updated list
+     console.log("Updated list")
+     for(let i = 0; i < productList.length; i++ )   {
+        console.log( productList[i]);
+     }
+
+
+
+    </script>
+</body>
+</html>
