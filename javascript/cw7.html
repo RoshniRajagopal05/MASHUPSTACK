@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let friend = {
+            name : "Roshni",
+            birthDate : "2003-04-05"
+        }
+        console.log(friend);
+        function getBirthdayDetails(convertToDate){
+
+            let dat = new Date(convertToDate.birthDate);
+            // Converts the birthDate string into a date,
+            let daate = dat.getDate();
+            console.log("Date Object : ", dat);
+            console.log("Birthdate string after converting to an object",dat);
+
+            //   Extracts and prints the year,
+            console.log("Bith year from the friend object",dat.getFullYear());
+
+            //Extracts and prints the month name
+            let months = ["January", "February","March", "April", "May", "June", "July","August","September","October","November", "December"]
+            let month = months[dat.getMonth()];
+            console.log("Birth month from the friend object : ", month);
+
+            //Extracts and prints day of the month
+            console.log("Birth day from the friend object : ", dat.getDate());
+            
+
+             // Calculates how many years old the friend is as of today.
+            let today = new Date();
+            let age = today.getFullYear() - dat.getFullYear();
+            console.log( " Current age of the friend as of today : ", age);
+            
+
+            //Birthday in this curent year
+
+            let birthdayThisYear = new Date(
+                today.getFullYear(),
+                dat.getMonth(),
+                dat.getDate());
+
+               // If birthday hasn't happened yet, subtract one year
+            if ( today < birthdayThisYear){
+                age--;
+            }
+           
+            console.log(convertToDate.name + " was born on " + daate + " " + month + " and is " + age + " years old.");
+            
+        }
+        getBirthdayDetails(friend);
+
+       
+        
+       
+
+    </script>
+</body>
+</html>
