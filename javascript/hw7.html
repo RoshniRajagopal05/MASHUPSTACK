@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let userDate = prompt("Enter a past date (YYYY-MM-DD): ");
+        let date = new Date(userDate);
+        let year = date.getFullYear();
+        let months = ["January", "February", "March", "April", "May" , "June", "July","August","September","October","November", "December"];
+        let month = months[date.getMonth()]
+        let day = date.getDate();
+        let today = new Date();
+        console.log(today);
+
+        let years = today.getFullYear() - date.getFullYear();
+        let anniversaryThisYear = new Date(
+            today.getFullYear(),
+            date.getMonth(),
+            date.getDate()
+
+        );
+
+        if (today < anniversaryThisYear){
+           years--;
+        }
+        
+
+        let message ;
+        if (years >= 1 ){
+            message = "It has been more than " + years + " years since that date.";
+        } else {
+            message = "It has been less than a year since that date.";
+        }
+        
+
+        console.log("The user entered year: ", year);
+        console.log("The user entered month: ", month);
+        console.log("The user entered day : ", day);
+         console.log(message);
+
+        
+       
+
+
+        
+
+
+
+
+    </script>
+</body>
+</html>
