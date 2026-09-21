@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n=5
+
+    for (i = 1; i <= n; i++)   {
+        let productCode = Number(prompt(" Enter the product code (1-3): "));
+        let quantity = Number(prompt(" Enter the quantity : "))
+        let price ;
+        
+        switch( productCode ){
+            case 1:
+                 price = 30;
+                 break
+            case 2:
+                 price = 10;
+                 break
+            case 3:
+                 price = 50;
+                 break
+            default :
+                 n++
+                 console.log("Invalid product code");
+                 continue
+
+        }
+        let total = price * quantity;
+        console.log("Total price : ",total);
+
+
+        if( total > 100){
+            console.log("High Purchase : ", total);
+
+        } else {
+            console.log("Normal Purchase : ", total);
+        }
+    }
+    
+    </script>
+</body>
+</html>
