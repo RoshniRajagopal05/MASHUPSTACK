@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let guessedNumber = Number(prompt("Enter a number (1-5)"));
+
+        switch(guessedNumber){
+               case 1 : 
+                    guessedNumber = 1;
+                    console.log("The entered number is One. Wrong guess. Try again.");
+                    break
+               case 2 :
+                    guessedNumber = 2;
+                    console.log("The entered number is Two. Wrong guess. Try again.");  
+               case 3 :
+                    guessedNumber = 3;
+                    console.log("You guessed it right!");  
+                    break  
+               case 4:
+                    guessedNumber = 4;
+                    console.log("The entered number is Four. Wrong guess. Try again.") 
+                    break
+               case 5:
+                    guessedNumber = 5;
+                    console.log("The entered number is Four. Wrong guess. Try again.") 
+                    break
+               default:
+                    console.log("The entered number is out of range. Invalid input");
+                          
+
+        }
+           
+    </script>
+</body>
+</html>
