@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let chances = 5;
+       let guessedCorrectly = false;
+        for (i = 0; i < chances ; i++){
+       let userGuessedNumber = Number(prompt("Enter a number between the range (10 - 20)"));
+         
+        if ( userGuessedNumber < 10 || userGuessedNumber > 15){
+            console.log("Invalid Input");
+            continue;
+        }
+        
+
+        switch (userGuessedNumber){
+            case 10 :
+                userGuessedNumber = 10
+                console.log ("The user entered number is Ten. Wrong guess. Try again.");
+                break
+
+            case 11 :
+                userGuessedNumber = 11
+                console.log ("The user entered number is Eleven. Wrong guess. Try again.");
+                break
+            
+            case 12 :
+                userGuessedNumber = 12
+                console.log ("The user entered number is Twelve. Wrong guess. Try again.");
+                break
+
+            case 13 :
+                userGuessedNumber = 13
+                console.log ("The user entered number is Thirteen. Wrong guess. Try again.");
+                break
+
+            case 14 :
+                userGuessedNumber = 14
+                console.log ("The user entered number is Fourteen. Wrong guess. Try again.");
+                break
+
+            case 15 :
+                userGuessedNumber = 15
+                console.log ("Correct! You found the number! It is fifteen");
+                guessedCorrectly = true;
+                break;
+            
+        }
+    }
+
+    if ( guessedCorrectly === false ) {
+        console.log("Game Over")
+    }
+    </script>
+</body>
+</html>
