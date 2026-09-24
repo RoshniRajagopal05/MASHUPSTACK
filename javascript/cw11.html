@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         class Book {
+         constructor (booktitle, author, price ) {
+         this.bookTitle = booktitle;
+         this.author = author;
+         this.price = price;
+         console.log(" The title of the book is " + this.bookTitle  + " and author of the book is " + this.author +  " and price of the book is " + this.price);
+         }
+        
+
+         bookDetails () {
+            console.log("Getter method called");
+            return this.bookTitle + " written by " + this.author;
+         }
+
+         updateBookDetails (rate){
+            
+            if(isFinite(rate)  && (rate > 0)){
+              this.price = rate;
+              console.log("Setter method called");
+              console.log("updated price of the book using setter method:", this.price);
+           } else {
+              console.log("Invalid input format, ", rate)
+           }
+       }
+    }
+
+
+    let  book1 = new Book ("NO EXIT",  "Taylor Adams", 750);
+    book1.updateBookDetails(900);
+    book1.updateBookDetails("hello");
+    book1.updateBookDetails(-100);
+    console.log(" Updated price", book1.price);
+    console.log(book1.bookDetails ());
+
+    </script>
+</body>
+</html>
