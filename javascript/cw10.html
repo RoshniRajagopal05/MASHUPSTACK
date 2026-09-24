@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = `{
+            "name" : "Roshni Rajagopal",
+            "email" : "roshnirajagopal6@gmail.com",
+            "message" : " I am Roshni, and i am passionate about arts and literature Also currently interested in knowing more about emerging tech. Overtime wishing myself to appear as a highly educated tech person."
+        }`
+        console.log(user);
+
+        let jsobj ;
+        try {
+        jsobj =  JSON.parse(user);
+        console.log(jsobj);
+        }
+        
+    
+
+    catch (error) {
+        console.log("Error",error);
+
+    }
+
+        
+        const receiveMessage = () =>{
+        console.log(`Message received from ${jsobj.name} is `, jsobj.message);
+        }
+
+        receiveMessage();
+    </script>
+</body>
+</html>

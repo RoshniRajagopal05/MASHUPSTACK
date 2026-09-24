@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let review = `{
+            "name" : "Alin",
+            "product" : "Laptop",
+            "message" : "The Laptop is Excellent and the performance is really good. "
+        }`;
+        console.log(review);
+
+        let userReview;
+
+        try{
+        userReview = JSON.parse(review);
+        console.log(userReview.message);
+        console.log(userReview);
+        } catch (error) {
+        console.log(error);
+        console.log("Invalid json");
+        }
+        
+        const reviewContains = () => {
+            if(/\excellent/ig.test(userReview.message)){
+                console.log("Excellent review received");
+            } else {
+                console.log("Review received");
+            }
+        }
+
+        reviewContains();
+    </script>
+</body>
+</html>
