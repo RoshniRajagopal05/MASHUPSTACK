@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class userSystem {
+            constructor(name, age, email){
+                this.name = name;
+                this.age = age;
+                this.email = email;
+                console.log(" The name of the user is " + this.name + " and the users age is " + this.age + " and the email of this particular user is " + this.email);
+            }
+
+            get userName (){
+                console.log("Getter method for getting name is called");
+                return "The name is " + this.name;
+            }
+
+            get userAge(){
+                console.log("Getter method for getting age is called"); 
+                return " The age of " + this.name + "is" + this.age ;
+            }
+
+            set userEmail(newEmail){
+                console.log("Setter method for setting email is called");
+                if(newEmail.includes("@")){
+                   this.email = newEmail;
+                   console.log("Email updated succesfully--",newEmail);
+                } else {
+                    console.log("Invalid email :", newEmail);
+                }
+            }
+        }
+
+        let user1 = new userSystem("Roshni", 24, "roshni123@gmail.com");
+        console.log(" Name : ",user1.userName);
+        console.log(" Age : ",user1.userAge)
+        user1.userEmail = "rosu321@gmail.com" ;
+        user1.userEmail = "roshni.com";
+
+        console.log("With updated value : ", user1.email);
+
+    </script>
+</body>
+</html>

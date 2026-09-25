@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>This is a sample paragraph for demonstration. </p>
+    <p id="demo"></p>
+
+    <form action = "" id="myForm">
+     <label for = "name">Type something inside the text : </label><br><br>
+    <input id = "name"  type="text">
+    <input type = "submit">
+    </form>
+    <script>
+           const form = document.getElementById("myForm");    
+           const input = document.getElementById("name");
+           const paragraph = document.getElementById("demo");
+
+           form.addEventListener("submit", function(event) {
+                event.preventDefault();
+                paragraph.textContent = input.value;
+                paragraph.style.color = "blue";
+           });
+
+
+           paragraph.addEventListener("mouseover", function(){
+            paragraph.style.color = "red";
+           });
+
+           paragraph.addEventListener("mouseout", function(){
+            paragraph.style.color= "blue";
+           });
+
+
+
+    </script>
+</body>
+</html>
