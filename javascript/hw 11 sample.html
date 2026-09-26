@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class product {
+            constructor(productName,price,category){
+            this._productName = productName;
+            this._price = price;
+            this.category = category;
+            console.log("The product name is " + this._productName + " and it's price is " + this._price + " and it belongs to the category of " +this.category);
+              } 
+
+        
+            
+            get productName()  {
+                console.log("Getter method for getting product name is called ");
+                return "The product name is " + this._productName;
+            }
+
+            get productPrice(){
+                console.log("Getter method for getting product price is called  ");
+                return "The product price is " + this._price;
+            }
+
+            set productPrice(newPrice){
+                console.log("Setter method called");
+                if(typeof newPrice == "number" && newPrice > 0){
+                    this._price = newPrice;
+                    console.log(" Updated New Price : ", this._price);
+                    console.log("The value in the parameter newPrice : ", newPrice);
+                } else {
+                    console.log("Updated Price: Invalid Input");
+                }
+            }
+            }
+
+            let obj1 = new product("Laptop", 55000, "Electronics item");
+            console.log(obj1.productName);
+            console.log(obj1.productPrice);
+            obj1.productPrice = 80000;
+           console.log( obj1.productPrice );
+           obj1.productPrice = "yellow";
+           obj1.productPrice = -10;
+            
+
+    </script>
+</body>
+</html>
