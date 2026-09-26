@@ -6,6 +6,34 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1 id="demo"></h1>
+    <h1 id="demo1"></h1>
+    <form id="myForm" action="">
+        <label for="name">Ente your name : </label><br><br>
+        <input type="text" name="" id="name"><br><br>
+        <label for="feedback">Enter your feedback / Review :</label><br><br>
+        <textarea name="" id="feedback" cols="30" rows="10"></textarea><br><br>
+        <input type="submit">
+    </form>
+    <script>
+    const form = document.getElementById("myForm");
+    const name = document.getElementById("name");
+    const feedback = document.getElementById("feedback");
+    const heading = document.getElementById("demo")
+    const heading1 = document.getElementById("demo1");
+
+
+
+    form.addEventListener("submit", function(event){
+        event.preventDefault();
+        heading.textContent = name.value;
+        heading1.textContent = feedback.value;
+        heading1.style.color = "green";
+
+        
+   })
+
+    </script>
+
 </body>
 </html>
